@@ -7,6 +7,7 @@ Here are the steps I followed:
 2. Data Cleaning
 3. Data Transformation
 4. Defining Relationships
+5. Total Row Count
 
 
 ### 1. Data Import and Inspection
@@ -838,4 +839,26 @@ ADD CONSTRAINT fk_transaction_date FOREIGN KEY(transaction_date) REFERENCES mave
 -- 'region_id' must match a record in the regions table to assign a store to a region
 ALTER TABLE mavenmarket_stores
 ADD CONSTRAINT fk_region_id FOREIGN KEY (region_id) REFERENCES mavenmarket_regions (region_id);
+```
+
+
+### 5. Total Row Count
+
+In this phase, i will count the row across all tables.
+
+Below are the SQL queries and results.
+```sql
+/* ================================================================================
+   TOTAL ROW COUNT
+   ================================================================================ */
+
+SELECT (SELECT COUNT (*) FROM mavenmarket_customers) +
+       (SELECT COUNT (*) FROM mavenmarket_products) +
+       (SELECT COUNT (*) FROM mavenmarket_stores) +
+       (SELECT COUNT (*) FROM mavenmarket_regions) +
+       (SELECT COUNT (*) FROM mavenmarket_calendar) +
+       (SELECT COUNT (*) FROM mavenmarket_returns) +
+       (SELECT COUNT (*) FROM mavenmarket_orders) AS total_row_count;
+
+-- The total row count is 289,511
 ```
