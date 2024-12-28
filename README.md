@@ -19,7 +19,7 @@ In this phase, i import the data and check it for any issues. This includes:
 
 I found that the date column in several datasets had mixed formats, with some values not being actual dates. To fix this, I imported the date columns as **VARCHAR** (text) to keep all the values intact. Later, during the data cleaning & type conversion phase, I will convert them to proper date formats for consistency and analysis.
 
-Below are the SQL queries and results for each Iport and Inspection step.
+Below are the SQL queries and results for each Import and Inspection step.
 ```sql
 /* ================================================================================
    STEP 1: DATA IMPORT AND INSPECTION
