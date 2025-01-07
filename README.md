@@ -3,19 +3,19 @@
 The data preparation process ensures raw data is clean, consistent, and ready for analysis. It involves importing the data, fixing errors, and organizing it into a usable structure. This step is crucial for accurate and reliable results.
 
 Here are the steps I followed:
-1. Data Import and Inspection
+1. Data Import and Exploration
 2. Data Cleaning
 3. Data Transformation
 4. Defining Relationships
 5. Total Row Count
 
 
-### 1. Data Import and Inspection
+### 1. Data Import and Exploration
 
 In this phase, i import the data and check it for any issues. This includes:
 
 - Importing Data: Bringing the data into the system.
-- Inspecting Data: Looking for errors like missing values or incorrect formats.
+- Explorating Data: Looking for errors like missing values or incorrect formats.
 
 I found that the date column in several datasets had mixed formats, with some values not being actual dates. To fix this, I imported the date columns as **VARCHAR** (text) to keep all the values intact. Later, during the data cleaning & type conversion phase, I will convert them to proper date formats for consistency and analysis.
 
