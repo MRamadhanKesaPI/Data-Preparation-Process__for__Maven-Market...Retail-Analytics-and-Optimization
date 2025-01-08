@@ -12,12 +12,12 @@ Here are the steps I followed:
 
 ## Data Import and Exploration
 
-In this phase, i import the data and check it for any issues. This includes:
+The data is imported and checked for any issues, such as missing values or incorrect formats. Key steps include:
 
-- Importing Data: Bringing the data into the system.
-- Explorating Data: Looking for errors like missing values or incorrect formats.
+- **Importing Data:** Bringing the data into the system.
+- **Exploring Data:** Identifying errors like incorrect formats or missing values.
 
-I found that the date column in several datasets had mixed formats, with some values not being actual dates. To fix this, I imported the date columns as **VARCHAR** (text) to keep all the values intact. Later, during the data cleaning & type conversion phase, I will convert them to proper date formats for consistency and analysis.
+It was found that the date column in several datasets had mixed formats. To address this, the date columns were initially imported as text (VARCHAR) to preserve all values. They will be converted to proper date formats in the data cleaning phase for consistency.
 
 Below are the SQL queries and results for each Import and Inspection step.
 ```sql
@@ -184,11 +184,11 @@ COPY mavenmarket_orders_1998 FROM 'D:\Downloads\MAVEN\Maven\MavenMarket_Orders_1
 
 ## Data Cleaning
 
-In this phase,i clean the data to make sure it's accurate, consistent, and reliable. The process includes:
+The data is cleaned to ensure accuracy, consistency, and reliability. This process includes:
 
-- Type Conversion: Changing data to the correct format (e.g., text to dates or numbers).
-- Handling Null Values: Fixing missing data by filling or removing it.
-- Removing Duplicates: Removing duplicate entries to keep the data accurate.
+- **Type Conversion:** Changing data to the correct format (e.g., converting text to dates or numbers).
+- **Handling Null Values:**  Fixing missing data by filling or removing it.
+- **Removing Duplicates:** Eliminating duplicate entries to maintain data accuracy.
 
 Below are the SQL queries and results for each Cleaning step.
 ```sql
@@ -613,11 +613,11 @@ FROM mavenmarket_orders_1998;
 
 ## Data Transformation
 
-This section focuses on transforming the data to make it enriched. Key steps include:
+The data is transformed to enrich the dataset. Key steps include:
 
-- Combining Data: Merging datasets into a single, unified table.
-- Standardizing Values: Updating column values to ensure consistency and readability.
-- Creating New Columns: Adding and populating new columns to enrich the dataset with additional information.
+- **Combining Data:** Merging datasets into a unified table.
+- **Standardizing Values:** Ensuring consistency in column values for better readability.
+- **Creating New Columns:** Adding and populating new columns to provide additional information.
 
 Below are the SQL queries and results for each transformation step.
 ```sql
@@ -777,9 +777,9 @@ SET week_end = DATE_TRUNC('WEEK', date) + INTERVAL '6 days',
 
 ## Defining Relationships
 
-In this phase, i define relationships between tables to ensure data integrity and proper connections. 
+Relationships between tables are defined to ensure data integrity and proper connections.  
 
-Since the date values were imported as **VARCHAR** but were changed to actual **DATE** during data cleaning, the first step is to set the primary key (PK) for the date in the calendar table.
+Since the date values were imported as (VARCHAR) but were changed to actual (DATE) during data cleaning, the first step is to set the primary key (PK) for the date in the calendar table.
 
 Below are the SQL queries and results for each table relationships step.
 ```sql
@@ -844,7 +844,7 @@ ADD CONSTRAINT fk_region_id FOREIGN KEY (region_id) REFERENCES mavenmarket_regio
 
 ## Total Row Count
 
-In this phase, i will count the row across all tables.
+The total number of rows across all tables is counted to confirm the completeness and accuracy of the data.
 
 Below are the SQL queries and results.
 ```sql
