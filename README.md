@@ -10,7 +10,7 @@ Here are the steps I followed:
 5. [Total Row Count](#total-row-count)
 
 
-### Data Import and Exploration
+## Data Import and Exploration
 
 In this phase, i import the data and check it for any issues. This includes:
 
@@ -182,7 +182,7 @@ COPY mavenmarket_orders_1998 FROM 'D:\Downloads\MAVEN\Maven\MavenMarket_Orders_1
 ```
 
 
-### Data Cleaning
+## Data Cleaning
 
 In this phase,i clean the data to make sure it's accurate, consistent, and reliable. The process includes:
 
@@ -611,7 +611,7 @@ FROM mavenmarket_orders_1998;
 ```
 
 
-### Data Transformation
+## Data Transformation
 
 This section focuses on transforming the data to make it enriched. Key steps include:
 
@@ -775,7 +775,7 @@ SET week_end = DATE_TRUNC('WEEK', date) + INTERVAL '6 days',
 ```
 
 
-### Defining Relationships
+## Defining Relationships
 
 In this phase, i define relationships between tables to ensure data integrity and proper connections. 
 
@@ -842,7 +842,7 @@ ADD CONSTRAINT fk_region_id FOREIGN KEY (region_id) REFERENCES mavenmarket_regio
 ```
 
 
-### Total Row Count
+## Total Row Count
 
 In this phase, i will count the row across all tables.
 
